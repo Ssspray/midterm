@@ -1,18 +1,17 @@
 #include <stdio.h>
-int mian()
+int main()
 {
-    unsigned long long int a,b;
-    unsigned long long int max ;
+    unsigned long long int x,y,a,b;
+    x=0;
+    y=~x;
+    printf("the min is:%llu\n",x);
+    printf("the max is :%llu\n",y);
     a=1;
     b=0;
-    max=1;
-
-    while (a!=0)
+    while(a!=0)
     {
-        a<<1;
-        b=b+1;
-        max=max*2;
+        a=a<<1;
+        b++;
     }
-    printf("%llu\n",max); 
-    printf("%u\n",a);
+    printf("unsigned long long int size is:%llu\n",b);
 }
