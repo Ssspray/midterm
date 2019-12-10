@@ -1,19 +1,33 @@
 #include <stdio.h>
+#define MAXLINE 100
 int main()
-{   
+{
+    int p;
+    int q;
     int c;
-    int na=0;
-    int n0=0;
-
-    printf("This is an apple!We should eat it.");
-    while ((c=getchar()) !=EOF)
+    char s[MAXLINE];
+    while((s[c]=getchar())!=EOF)
     {
-        if(c=='a'||c=='A')
-          ++na;
-        else if(c=='0')
-          ++n0;
+        if(s[c]=='\n')
+        {
+            break;
+        }
+        c++;
+
     }
-    printf("The number of a is:%d\n",na);
-    printf("The number of 0 is:%d\n",n0);
-    return 0;
+    for(c=0;s[c]!='\n';c++)
+    {
+        if(s[c]=='A'||s[c]=='a')
+        {
+            p++;
+        }
+        if(s[c]=='0')
+        {
+            q++;
+        }
+    }
+    printf("the number of a is :%d\n",p);
+    printf("the number of 0 is :%d\n",q);
+
+    
 }
